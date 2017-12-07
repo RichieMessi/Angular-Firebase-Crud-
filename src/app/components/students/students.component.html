@@ -1,0 +1,42 @@
+<!-- <div class="container"> -->
+  <div class="col-med">
+    <span id="total" href="" class="btn  pink darken-3  grey-text z-depth-5 waves-effect waves-light"><i class="material-icons grey-text ">add</i>sum: {{totalAllowance  | currency:"USD":true}} </span>
+    <!-- <span class=" badge blue">total</span> -->
+    <!-- <span class="new badge blue badge-large" data-badge-caption="custom caption">4</span> -->
+  <!-- </div> -->
+</div>
+
+
+
+<table *ngIf="students?.length > 0; else noStudents" class="bordered   centered card-panel #424242 grey darken-3 grey-text text-lighten-5">
+    <thead class="#212121 grey darken-4 ">
+      <tr grey-text text-lighten-0>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Allowance</th>        
+        <th scope="col"></th>
+      </tr> 
+    </thead>
+      <tbody> 
+        <tr *ngFor="let student of students" class="grey-text text-lighten-0">
+          
+          <td>{{ student.firstName }} </td>
+          <td>{{ student.lastName }}</td>
+          <td>{{ student.phone }}</td>          
+          <td>{{ student.email }}</td>
+          <td>{{ student.allowance | currency:"USD"}}</td>
+           <td><a  onclick="Materialize.toast('Student Details', 2000)" [routerLink]="['/student/'+student.$key]" class="btn  blue darken-2  z-depth-5 waves-effect waves-light btn-lg"><i class="material-icons ">subdirectory_arrow_right</i></a></td>
+          <!-- <td><a [routerLink]="['/client/'+client.$key]" href="" ><i class="fa fa-arrow-circle-o-right"></i>  Details </a></td> -->
+        </tr>
+        <!-- grey-text darker-1 -->
+    
+        
+      </tbody>
+</table>
+
+
+  <ng-template #noStudents>
+      <p>There are no clients </p>
+    </ng-template> 
