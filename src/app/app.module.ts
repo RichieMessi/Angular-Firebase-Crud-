@@ -30,12 +30,12 @@ const appRoutes: Routes = [
 ]
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyA00JokXCXuV7MhW4SOY3ic_Xm4NvolbUM",
-  authDomain: "studentrecords-bec84.firebaseapp.com",
-  databaseURL: "https://studentrecords-bec84.firebaseio.com",
-  projectId: "studentrecords-bec84",
-  storageBucket: "studentrecords-bec84.appspot.com",
-  messagingSenderId: "970585849986"
+  apiKey: "AIzaSyCo257UbsL_vFZFIlAbjfu2-HFND-ViJ3I",
+  authDomain: "studentrecords-7b346.firebaseapp.com",
+  databaseURL: "https://studentrecords-7b346.firebaseio.com",
+  projectId: "studentrecords-7b346",
+  storageBucket: "",
+  messagingSenderId: "457025981895"
 }
 
 @NgModule({
